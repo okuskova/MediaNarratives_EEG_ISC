@@ -1,3 +1,5 @@
 # MediaNarratives_EEG_ISC
 
-Reedme will be here later.
+The pilot stage of the project “EEG Correlates of the Narrative Processing: The Impact of Media Literacy Skills” has been completed. The aim of the project was to investigate if there was a difference in the brain synchronization during media narrative processing among participants trained in media literacy (‘trained' group), and those who had never been trained in media literacy ('control' group). 
+During EEG recording the participants watched three videos: the fragments from the news and documentary films that contained fake facts and manipulations, for instance, various mismatches and inconsistencies in the visual content and the narrator’s speech, fallacious captions, intense, emotionally provocative music, and so on. Besides, all participants watched a fragment from a fiction film as a control video. Before and after each video the participants expressed their attitudes toward social issues brought up in the videos. We then investigated how their attitudes changed after the videos and whether that change was different for the two groups. Then we examined whether there was a correlation between those changes and the ISC during the narratives within the groups. In addition, we examined a correlation of individual behavior and traits with ISC.
+

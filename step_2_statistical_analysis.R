@@ -209,7 +209,7 @@ grid.arrange(g1,g2,g3,g4,ncol=2)
 
 
 
-########## For a Mixed analysis with both within-subjects factors and between-subjects factors (for both) ##########
+########## For a Mixed analysis with both within-subjects factors and between-subjects factors ##########
 
 df=data.frame('ISC'=c(ml_fake1,ml_fake2, ml_fake3, ml_control,
                       n_fake1,n_fake2, n_fake3, n_control),

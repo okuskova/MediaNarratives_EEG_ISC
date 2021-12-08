@@ -10,15 +10,27 @@ Preprocessing was conducted offline using the MATLAB software (MathWorks) and Br
 The following EEG data analysis steps have been followed:
 
 Step_1. Segmentation. NBS Presentation triggers were used to detect onset and offset times of the naturalistic stimuli.
+
 Step 2. Filtering. High-passed 0,5 Hz filter and Notch 50, 100, 150 and 200 Hz filters were applied. 
+
 Step 3. Bad channels and outlier samples were manually identified and, to prevent the duration distortion of the signal, they were not deleted but replaced with a flat (zero) signal. 
+
 Step 4. Eye movement artifacts were removed by independent component analysis (ICA).
+
 Step 5. Temporal alignment. The segmented data (see Step 1) were integrated in the same dot.mat file with dimensions TxDxN, where T denotes the number of time samples, D denotes the number of electrodes, and N denotes the number of subjects. 
+
 Step 6. ISC analysis: adjusting previously published scripts (see Parra Lab https://www.parralab.org/isc/)
+
 a. Estimation of the optimal projections of the data
+
 b. Calculation of the overall ISC 
+
 c. Comparison of the overall ISC between groups
+
 d. Calculation of ISC across time for each video
+
 e. Comparison of the ISC across time between videos
+
 Step 5. Statistics based on the ISC analysis output 
+
 In this repository I provide scripts only for this step since all the previous steps were either applied manually (e.g., in Brainstorm) or after adjusting previously published scripts (Parra Lab https://www.parralab.org/isc/) 

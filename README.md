@@ -4,9 +4,11 @@ The pilot stage of the project “EEG Correlates of the Narrative Processing: Th
 During EEG recording the participants watched three videos: the fragments from the news and documentary films that contained fake facts and manipulations, for instance, various mismatches and inconsistencies in the visual content and the narrator’s speech, fallacious captions, intense, emotionally provocative music, and so on. Besides, all participants watched a fragment from a fiction film as a control video. Before and after each video the participants expressed their attitudes toward social issues brought up in the videos. We then investigated how their attitudes changed after the videos and whether that change was different for the two groups. Then we examined whether there was a correlation between those changes and the ISC during the narratives within the groups. In addition, we examined a correlation of individual behavior and traits with ISC.
 
 EEG was recorded with 64 electrodes with a standard 10-10 placement system. Sampling rate was 500 Hz. Reference electrodes TP9 and TP10 were put on mastoids. Ground electrode was AFz. The electrooculogram (EOG) was recorded with two electrodes FT9, FT10. 
-Preprocessing was conducted offline using the MATLAB software (MathWorks) and Brainstorm software (Tadel et al. 2011).
 
 ## EEG data analysis
+
+Preprocessing was conducted offline using the MATLAB software (MathWorks) and Brainstorm software (Tadel et al. 2011).
+
 The following EEG data analysis steps have been followed:
 
 Step_1. Segmentation. NBS Presentation triggers were used to detect onset and offset times of the naturalistic stimuli.

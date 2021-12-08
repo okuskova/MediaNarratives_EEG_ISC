@@ -286,3 +286,169 @@ ex.f1f1np = nparLD(score ~ session * group, data = data_df43,
                    subject = "id", description = FALSE)
 summary(ex.f1f1np)
 
+
+
+all_data=read.xlsx("C:/statistics/changes.xlsx", sheet=3, startRow = 1)
+
+all_data$f1_i_ch=as.factor(all_data$f1_i_ch)
+all_data$f1_d_ch=as.factor(all_data$f1_d_ch)
+all_data$f1_c_ch=as.factor(all_data$f1_c_ch)
+all_data$f2_i_ch=as.factor(all_data$f2_i_ch)
+all_data$f2_d_ch=as.factor(all_data$f2_d_ch)
+all_data$f2_c_ch=as.factor(all_data$f2_c_ch)
+all_data$f3_i_ch=as.factor(all_data$f3_i_ch)
+all_data$f3_d_ch=as.factor(all_data$f3_d_ch)
+all_data$f3_c_ch=as.factor(all_data$f3_c_ch)
+all_data$c_i_ch=as.factor(all_data$c_i_ch)
+all_data$c_d_ch=as.factor(all_data$c_d_ch)
+all_data$c_c_ch=as.factor(all_data$c_c_ch)
+
+
+all_data$ISC_EF=as.numeric(c(all_data$ISC_EF))
+all_data$ISC_SR=as.numeric(c(all_data$ISC_SR))
+all_data$ISC_THGP=as.numeric(c(all_data$ISC_THGP))
+all_data$ISC_BYD=as.numeric(c(all_data$ISC_BYD))
+
+#f1
+
+model=polr(f1_i_ch ~ ISC_EF, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f1_i_ch", y = "ISC_EF", 
+          xlab = "Indirect question", ylab = "ISC")
+
+#plot(Effect(focal.predictors = 'ISC1', model))
+
+model=polr(f1_d_ch ~ ISC_EF, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f1_d_ch", y = "ISC_EF", 
+          xlab = "Direct question", ylab = "ISC")
+
+
+model=polr(f1_c_ch ~ ISC_EF, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f1_c_ch", y = "ISC_EF", 
+          xlab = "Control question", ylab = "ISC")
+
+
+#f2
+
+model=polr(f2_i_ch ~ ISC_SR, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f2_i_ch", y = "ISC_SR", 
+          xlab = "Indirect question", ylab = "ISC")
+
+#plot(Effect(focal.predictors = 'ISC1', model))
+
+model=polr(f2_d_ch ~ ISC_SR, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f2_d_ch", y = "ISC_SR", 
+          xlab = "Direct question", ylab = "ISC")
+
+
+model=polr(f2_c_ch ~ ISC_SR, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f2_c_ch", y = "ISC_SR", 
+          xlab = "Control question", ylab = "ISC")
+
+
+#f3
+
+model=polr(f3_i_ch ~ ISC_THGP, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f3_i_ch", y = "ISC_THGP", 
+          xlab = "Indirect question", ylab = "ISC")
+
+#plot(Effect(focal.predictors = 'ISC1', model))
+
+model=polr(f3_d_ch ~ ISC_THGP, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f3_d_ch", y = "ISC_THGP", 
+          xlab = "Direct question", ylab = "ISC")
+
+
+model=polr(f3_c_ch ~ ISC_THGP, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "f3_c_ch", y = "ISC_THGP", 
+          xlab = "Control question", ylab = "ISC")
+
+
+#control
+
+model=polr(c_i_ch ~ ISC_BYD, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "c_i_ch", y = "ISC_BYD", 
+          xlab = "Indirect statement", ylab = "ISC")
+
+plot(Effect(focal.predictors = 'ISC_BYD', model))
+
+
+model=polr(c_d_ch ~ ISC_BYD, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "c_d_ch", y = "ISC_BYD", 
+          xlab = "Direct question", ylab = "ISC")
+
+
+model=polr(c_c_ch ~ ISC_BYD, data=all_data, Hess = T)
+#summary(model)
+ctable <- coef(summary(model))
+pnorm(abs(ctable[, "t value"]), lower.tail = FALSE)[1] * 2
+
+confint(model) # Is 0 inside the interval? If yes, then the model is not statistically significant
+
+ggscatter(all_data, x = "c_c_ch", y = "ISC_BYD", 
+          xlab = "Control question", ylab = "ISC")

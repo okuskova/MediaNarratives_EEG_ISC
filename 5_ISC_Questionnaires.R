@@ -21,7 +21,6 @@ all_data$ISC_THGP=as.numeric(c(all_data$ISC_THGP))
 all_data$ISC_BYD=as.numeric(c(all_data$ISC_BYD))
 all_data$Group=factor(all_data$Group,levels=c(1,2),labels=c('trained group','control'))
 
-# Shapiro-Wilk normality test for test score
 # Shapiro-Wilk normality test for ISC
 shapiro.test(all_data$ISC_THGP) 
 # Shapiro-Wilk normality test for NfC
